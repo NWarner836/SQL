@@ -93,3 +93,9 @@ WHERE paid_time_off_days>10
 AND healthcare_benefits=1
 GROUP BY paid_time_off_days
 ORDER BY paid_time_off_days desc;
+
+#What is the average employee tenure for companies that offer healthcare benefits and maternity leave?
+SELECT company_name, avg_employee_tenure
+FROM fortune_companies
+WHERE healthcare benefits=1 and maternity_leave_weeks>=1
+ORDER BY avg_employee_tenure DESC;
